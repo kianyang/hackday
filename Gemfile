@@ -25,6 +25,10 @@ gem 'rqrcode'
 gem 'rails_admin', '~> 1.3'
 gem 'rolify'
 gem 'mysql2'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.12.9'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
