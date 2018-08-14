@@ -1,3 +1,3 @@
 class LineItem < ApplicationRecord
-  belongs_to :receipts
+  belongs_to :receipt
 end

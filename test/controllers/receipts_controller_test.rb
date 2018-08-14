@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ReceiptControllerTest < ActionDispatch::IntegrationTest
+class ReceiptsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

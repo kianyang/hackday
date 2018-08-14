@@ -1,0 +1,8 @@
+<% 
+qrcode = RQRCode::QRCode.new( 'https://github.com/whomwah/rqrcode', :size => 5, :level => :h )
+%>
+
+
+<div class="barcode">
+  <%= raw qrcode.as_html %>
+</div>

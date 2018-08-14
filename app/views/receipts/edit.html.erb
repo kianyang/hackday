@@ -1,0 +1,84 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Menu</h4>
+        <p class="card-category"> Here is a subtitle for this table</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Name
+              </th>
+              <th>
+                Price
+              </th>
+              <th>
+                
+              </th>
+            </thead>
+            <tbody>
+              <% @products.each do |product| %>
+                <tr>
+                  <td>
+                    <%= product.name %>
+                  </td>
+                  <td class="text-primary">
+                    <%= number_to_currency(product.price) %>
+                  </td>
+                  <td>
+                    <%= link_to "Add To Cart", add_to_cart_receipt_path(product_id: product.id), class: "btn btn-primary pull-right" %>
+                    <!-- <button type="button" class=""></button>-->
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Order No <%= @receipt.id %></h4>
+        <p class="card-category"> Here is a subtitle for this table</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Name
+              </th>
+              <th>
+                Price
+              </th>
+            </thead>
+            <tbody>
+              <% @products.each do |product| %>
+                <tr>
+                  <td>
+                    <%= product.name %>
+                  </td>
+                  <td class="text-primary">
+                    <%= number_to_currency(product.price) %>
+                  </td>
+                </tr>
+              <% end %>
+              <tr>
+                <td>Total</td>
+                <td class="text-primary"><%= number_to_currency(100) %></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <button type="button" class="btn btn-primary pull-right">Close Sale</button>
+      </div>
+    </div>
+  </div>
+
+</div>
