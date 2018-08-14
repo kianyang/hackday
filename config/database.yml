@@ -15,10 +15,3 @@ test:
   pool: 5
   username: root
   password: 
-
-
-production:
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  database: ENV['CLEARDB_DATABASE_URL']
