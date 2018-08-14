@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     get 'claim', on: :member
   end
   
-  resource :profile
+
+  resource :profile, only: [:edit, :update]
+
+  get 'dashboard', to: 'home#dashboard'
+  get 'vendor_dashboard', to: 'home#vendor_dashboard'
 
   root to: "home#index"
 end

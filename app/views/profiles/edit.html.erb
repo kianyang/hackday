@@ -1,0 +1,67 @@
+<div class="row">
+<div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Edit Profile</h4>
+                  <p class="card-category">Complete your profile</p>
+                </div>
+                <div class="card-body">
+                  <%= form_for @user, url: {action: "update", controller: 'profiles'} do |form| %>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Email address</label>
+                          <%= form.text_field :email, class: 'form-control', disabled: true %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Fist Name</label>
+                          <%= form.text_field :first_name, class: 'form-control' %>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Last Name</label>
+                          <%= form.text_field :last_name, class: 'form-control' %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Address</label>
+                          <%= form.text_area :address, class: 'form-control' %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">City</label>
+                          <%= form.text_field :city, class: 'form-control' %>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Country</label>
+                          <%= form.text_field :country, class: 'form-control' %>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Postal Code</label>
+                          <%= form.text_field :postal_code, class: 'form-control' %>
+                        </div>
+                      </div>
+                    </div>
+                     <%= form.submit "Update Profile", class: "btn btn-primary pull-right" %>
+                    <!-- <button type="submit" class="btn btn-primary pull-right">Update Profile</button>-->
+                    <div class="clearfix"></div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            </div>
