@@ -29,7 +29,7 @@
                     <%= number_to_currency(product.price) %>
                   </td>
                   <td>
-                    <%= link_to "Add To Cart", add_to_cart_receipt_path(product_id: product.id), class: "btn btn-primary pull-right" %>
+                    <%= link_to "Add To Cart", add_to_cart_invoice_path(product_id: product.id), class: "btn btn-primary pull-right" %>
                     <!-- <button type="button" class=""></button>-->
                   </td>
                 </tr>
@@ -44,7 +44,7 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header card-header-primary">
-        <h4 class="card-title ">Order No <%= @receipt.id %></h4>
+        <h4 class="card-title ">Order No <%= @invoice.id %></h4>
         <p class="card-category"> Here is a subtitle for this table</p>
       </div>
       <div class="card-body">
@@ -59,7 +59,7 @@
               </th>
             </thead>
             <tbody>
-              <% @receipt.line_items.each do |line_item| %>
+              <% @invoice.line_items.each do |line_item| %>
                 <tr>
                   <td>
                     <%= line_item.description %>
@@ -71,13 +71,13 @@
               <% end %>
               <tr>
                 <td>Total</td>
-                <td class="text-primary"><%= number_to_currency(@receipt.line_items.sum(:price)) %></td>
+                <td class="text-primary"><%= number_to_currency(@invoice.line_items.sum(:price)) %></td>
               </tr>
             </tbody>
           </table>
           </div>
 
-          <%= link_to "Close Sale", receipt_path(@receipt), class: "btn btn-primary pull-right" %>
+          <%= link_to "Close Sale", invoice_path(@invoice), class: "btn btn-primary pull-right" %>
       </div>
     </div>
   </div>

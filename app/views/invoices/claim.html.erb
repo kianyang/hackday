@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Order No <%= @invoice.id %></h4>
+        <p class="card-category"> Here is a subtitle for this table</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Item
+              </th>
+              <th>
+                Price
+              </th>
+            </thead>
+            <tbody>
+              <% @receipt.line_items.each do |line_item| %>
+                <tr>
+                  <td>
+                    <%= line_item.description %>
+                  </td>
+                  <td class="text-primary">
+                    <%= number_to_currency(line_item.price) %>
+                  </td>
+                </tr>
+              <% end %>
+              <tr>
+                <td>Total</td>
+                <td class="text-primary"><%= number_to_currency(@invoice.line_items.sum(:price)) %></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
