@@ -59,24 +59,25 @@
               </th>
             </thead>
             <tbody>
-              <% @products.each do |product| %>
+              <% @receipt.line_items.each do |line_item| %>
                 <tr>
                   <td>
-                    <%= product.name %>
+                    <%= line_item.description %>
                   </td>
                   <td class="text-primary">
-                    <%= number_to_currency(product.price) %>
+                    <%= number_to_currency(line_item.price) %>
                   </td>
                 </tr>
               <% end %>
               <tr>
                 <td>Total</td>
-                <td class="text-primary"><%= number_to_currency(100) %></td>
+                <td class="text-primary"><%= number_to_currency(@receipt.line_items.sum(:price)) %></td>
               </tr>
             </tbody>
           </table>
           </div>
-          <button type="button" class="btn btn-primary pull-right">Close Sale</button>
+
+          <%= link_to "Close Sale", receipt_path(@receipt), class: "btn btn-primary pull-right" %>
       </div>
     </div>
   </div>

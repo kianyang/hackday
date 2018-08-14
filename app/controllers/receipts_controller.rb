@@ -1,7 +1,7 @@
 class ReceiptsController < ApplicationController
   before_action :authenticate_user!
   before_action :load_vendor
-  before_action :load_receipt, only: [:edit, :update, :add_to_cart]
+  before_action :load_receipt, only: [:edit, :update, :add_to_cart, :show]
 
   def new
     @receipt = @vendor.receipts.create
@@ -23,6 +23,7 @@ class ReceiptsController < ApplicationController
       quantity: 1,
       sku: product.sku
     })
+
     redirect_to edit_receipt_path(@receipt)
   end
 

@@ -1,8 +1,51 @@
 <% 
-qrcode = RQRCode::QRCode.new( 'https://github.com/whomwah/rqrcode', :size => 5, :level => :h )
+qrcode = RQRCode::QRCode.new( 'https://github.com/whomwah/rqrcode', :size => 4, :level => :h )
 %>
+<div class="row">
+<div class="col-md-6">
+  <div class="card">
+    <div class="barcode">
+    <%= raw qrcode.as_html %>
+  </div>
+  </div>
+</div>
 
-
-<div class="barcode">
-  <%= raw qrcode.as_html %>
+<div class="col-md-6">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Order No <%= @receipt.id %></h4>
+        <p class="card-category"> Here is a subtitle for this table</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Name
+              </th>
+              <th>
+                Price
+              </th>
+            </thead>
+            <tbody>
+              <% @receipt.line_items.each do |line_item| %>
+                <tr>
+                  <td>
+                    <%= line_item.description %>
+                  </td>
+                  <td class="text-primary">
+                    <%= number_to_currency(line_item.price) %>
+                  </td>
+                </tr>
+              <% end %>
+              <tr>
+                <td>Total</td>
+                <td class="text-primary"><%= number_to_currency(@receipt.line_items.sum(:price)) %></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
