@@ -1,0 +1,12 @@
+class CreateProducts < ActiveRecord::Migration[5.1]
+  def change
+    create_table :products do |t|
+      t.string :name
+      t.decimal :price
+      t.integer :quantity
+      t.string :sku
+      t.references :categories
+      t.timestamps
+    end
+  end
+end
