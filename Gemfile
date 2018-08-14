@@ -29,6 +29,8 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.12.9'
+gem 'carrierwave', '~> 1.0'
+gem 'cloudinary'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
