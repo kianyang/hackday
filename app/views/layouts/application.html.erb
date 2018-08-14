@@ -3,7 +3,8 @@
   <head>
     <title>Reaio</title>
     <%= csrf_meta_tags %>
-
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+ 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" %>
     <%= javascript_include_tag 'application' %>
@@ -27,6 +28,13 @@
         <%= render 'layouts/shared/footer' %>
       </div>
     </div>
+
+  <%= javascript_include_tag 'material/bootstrap-material-design.min' %>
+  <%= javascript_include_tag 'material/perfect-scrollbar.jquery.min' %>
+  <%= javascript_include_tag 'material/chartist.min' %>
+  <%= javascript_include_tag 'material/bootstrap-notify' %>
+  <%= javascript_include_tag 'material/material-dashboard.min' %>
+  <%= javascript_include_tag 'material/demo' %>
 
     <script>
       $(document).ready(function() {

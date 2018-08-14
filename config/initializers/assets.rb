@@ -11,4 +11,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-# Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( admin.js admin.css material/bootstrap-material-design.min.js material/perfect-scrollbar.jquery.min.js material/chartist.min.js material/bootstrap-notify.js material/material-dashboard.min.js material/demo.js)
