@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_many :receipts
   has_many :rewards
-  belongs_to :vendor
+  has_one :vendor
 
   after_create :assign_default_role
 

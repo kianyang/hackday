@@ -17,7 +17,7 @@
 //= require material/perfect-scrollbar.jquery.min
 //= require material/chartist.min
 //= require material/bootstrap-notify
-//= require material/material-dashboard
+//= require material/material-dashboard.min
 //= require material/demo
 //= require rails-ujs
 //= require turbolinks

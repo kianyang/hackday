@@ -10,14 +10,17 @@
   </head>
 
   <body class="">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <div class="wrapper ">
       <%= render 'layouts/vendor/sidebar' %>
       <div class="main-panel">
         <%= render 'layouts/shared/navigation_bar' %>
         <div class="content">
           <div class="container-fluid">
+            <% flash.each do |key, value| %>
+              <div class="<%= flash_class(key) %>" role="alert">
+                    <%= value %>
+              </div>
+            <% end %>
             <%= yield %>
           </div> <!-- container fluid -->
         </div>
