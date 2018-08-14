@@ -20,7 +20,7 @@ vendor_user = User.create({
     email: 'kianyang@gmail.com',
     password: 'kianyang',
     password_confirmation: 'kianyang',
-    vendor: vendor
+    vendor_id: vendor.id
 })
 vendor_user.add_role :vendor
 
