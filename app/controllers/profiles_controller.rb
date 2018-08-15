@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def edit
+    @header = "Profile"
     @user = current_user
   end
 

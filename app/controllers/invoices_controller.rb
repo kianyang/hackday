@@ -9,6 +9,7 @@ class InvoicesController < ApplicationController
   end
 
   def edit
+    @header = "Sales"
     @products = @vendor.products
   end
 
@@ -16,7 +17,8 @@ class InvoicesController < ApplicationController
   end
 
   def show
-    @qrcode = RQRCode::QRCode.new(claim_invoice_url(@invoice), :size => 6, :level => :h)
+    @header = "Sales"
+    @qrcode = RQRCode::QRCode.new(claim_invoice_url(@invoice), :size => 5, :level => :h)
   end
 
   def add_to_cart
@@ -32,7 +34,7 @@ class InvoicesController < ApplicationController
   end
 
   def claim
-    if current_user.has_role?(:consumer) && @invoice.user_id.blank?
+    if current_user.has_role?(:consumer)
       flash[:success] = 'Receipt successfully claimed'
       @invoice.user_id = current_user
       @invoice.save

@@ -11,4 +11,13 @@ module ApplicationHelper
   def active_class(link_path)
     current_page?(link_path) ? 'active' : ''
   end
+
+  def user_type(user)
+    if user.has_role? :vendor 
+      'vendor'
+    else
+      'consumer'
+    end
+  end
+
 end

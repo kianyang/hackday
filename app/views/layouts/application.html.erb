@@ -12,7 +12,7 @@
 
   <body class="">
     <div class="wrapper ">
-      <%= render "layouts/consumer/sidebar" %>
+      <%= render "layouts/#{user_type(current_user)}/sidebar" if user_signed_in?  %>
       <div class="main-panel">
         <%= render 'layouts/shared/navigation_bar' %>
         <div class="content">
