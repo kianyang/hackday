@@ -1,0 +1,47 @@
+#intro {
+  background: url('/assets/panorama-3094696_1920-e9ff8c0ebaec0a8b543206f5f7b065752099b72a6fea6ec15b0626b9d57e2a91.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.top-nav-collapse {
+  background-color: #369f24 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #369f24 !important;
+  }
+}
+
+#intro .h6 {
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.hm-gradient .full-bg-img {
+  background: rgba(42, 27, 161, 0.7);
+  background: linear-gradient(45deg, rgba(161, 81, 27, 0.5), rgba(29, 210, 51, 0.5) 100%);
+}
+
+@media (max-width: 450px) {
+  .margins {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+#pricing .lead {
+  opacity: 0.7;
+}
+
+#pricing .card-image {
+  background: url("/assets/architecture-177a800f43876299fcc246ca3f8a0d2ba2335926b3238cae54ad1e13a8ffbcc4.jpg") no-repeat center center;
+}
+
+#pricing ul li {
+  font-size: 1.1em;
+}
