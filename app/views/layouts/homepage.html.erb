@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payceipt</title>
+    <%= csrf_meta_tags %>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+ 
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body class="">
+    <div class="wrapper ">
+      <div class="">
+        <div class="content">
+          <div class="container-fluid">
+            <% flash.each do |key, value| %>
+              <div class="<%= flash_class(key) %>" role="alert">
+                    <%= value %>
+              </div>
+            <% end %>
+            <%= yield %>
+          </div> <!-- container fluid -->
+        </div>
+      </div>
+    </div>
+
+  <%= javascript_include_tag 'material/bootstrap-material-design.min' %>
+  <%= javascript_include_tag 'material/perfect-scrollbar.jquery.min' %>
+  <%= javascript_include_tag 'material/bootstrap-notify' %>
+  </body>
+</html>

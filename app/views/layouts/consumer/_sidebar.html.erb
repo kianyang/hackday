@@ -30,6 +30,12 @@
               <p>Profile</p>
             </a>
           </li>
+          <li class="nav-item">
+            <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
+              <i class="material-icons">exit_to_app</i>
+              <p>Logout</p>
+            <% end %>
+          </li>
         </ul>
       </div>
-    </div>
+    </div> 

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    
+    render layout: "homepage"
   end
 
   def dashboard
