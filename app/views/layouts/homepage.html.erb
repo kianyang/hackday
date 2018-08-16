@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html class="full-height" lang="en-US">
   <head>
-    <title>Payceipt</title>
-    <%= csrf_meta_tags %>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
- 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Landing</title>
+    <meta name="description" content="Material design landing page template built by TemplateFlip.com"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag 'mdb/bootstrap.min', media: 'all' %>
+    <%= stylesheet_link_tag 'mdb/mdb.min', media: 'all' %>
+    <%= stylesheet_link_tag 'mdb/main', media: 'all' %>
 
-  <body class="">
-    <div class="wrapper ">
-      <div class="">
-        <div class="content">
-          <div class="container-fluid">
-            <% flash.each do |key, value| %>
-              <div class="<%= flash_class(key) %>" role="alert">
-                    <%= value %>
-              </div>
-            <% end %>
-            <%= yield %>
-          </div> <!-- container fluid -->
+  </head>
+  <%= yield %>
+    <footer class="page-footer indigo darken-2 center-on-small-only pt-0 mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mb-5 flex-center"><a class="px-3"><i class="fa fa-facebook fa-lg white-text"></i></a><a class="px-3"><i class="fa fa-twitter fa-lg white-text"></i></a><a class="px-3"><i class="fa fa-google-plus fa-lg white-text"></i></a><a class="px-3"><i class="fa fa-linkedin fa-lg white-text"></i></a></div>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="footer-copyright">
+        <div class="container-fluid">
+          <p>&copy; <a href="/">Material Landing</a> - Design: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></p>
+        </div>
+      </div>
+    </footer>
+    <%# <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> %>
+    <%# <script type="text/javascript" src="js/popper.min.js"></script> %>
+    <%# <script type="text/javascript" src="js/bootstrap.min.js"></script> %>
+    <%# <script type="text/javascript" src="js/mdb.min.js"></script> %>
 
-  <%= javascript_include_tag 'material/bootstrap-material-design.min' %>
-  <%= javascript_include_tag 'material/perfect-scrollbar.jquery.min' %>
-  <%= javascript_include_tag 'material/bootstrap-notify' %>
+
+<%= javascript_include_tag 'mdb/bootstrap.min' %>
+<%= javascript_include_tag 'mdb/jquery-3.2.1.min' %>
+<%= javascript_include_tag 'mdb/main' %>
+<%= javascript_include_tag 'mdb/popper.min' %>
+
+    <script>new WOW().init();</script>
   </body>
 </html>
