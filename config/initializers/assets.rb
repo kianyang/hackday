@@ -21,10 +21,11 @@ Rails.application.config.assets.precompile += %w(
   material/material-dashboard.min.js 
   material/demo.js
   mdb/bootstrap.min.css
-  mdb/mdb.min.css
+  mdb/mdb.css
   mdb/main.css
   mdb/bootstrap.min.js
   mdb/jquery-3.2.1.min.js
   mdb/main.js
   mdb/popper.min.js
+  mdb/mdb.min.js
 )

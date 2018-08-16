@@ -2,13 +2,16 @@
 <html class="full-height" lang="en-US">
   <head>
     <meta charset="UTF-8">
+    <%= csrf_meta_tags %>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Landing</title>
+    <title>Payceipt - Innovating Beyond the Sale</title>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" %>
     <meta name="description" content="Material design landing page template built by TemplateFlip.com"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag 'mdb/bootstrap.min', media: 'all' %>
-    <%= stylesheet_link_tag 'mdb/mdb.min', media: 'all' %>
+    <%= stylesheet_link_tag 'mdb/mdb', media: 'all' %>
     <%= stylesheet_link_tag 'mdb/main', media: 'all' %>
 
   </head>
@@ -23,21 +26,16 @@
       </div>
       <div class="footer-copyright">
         <div class="container-fluid">
-          <p>&copy; <a href="/">Material Landing</a> - Design: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></p>
+          <p>&copy; <a href="/">Payceipt</a> 2018</p>
         </div>
       </div>
     </footer>
-    <%# <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> %>
-    <%# <script type="text/javascript" src="js/popper.min.js"></script> %>
-    <%# <script type="text/javascript" src="js/bootstrap.min.js"></script> %>
-    <%# <script type="text/javascript" src="js/mdb.min.js"></script> %>
-
-
-<%= javascript_include_tag 'mdb/bootstrap.min' %>
-<%= javascript_include_tag 'mdb/jquery-3.2.1.min' %>
-<%= javascript_include_tag 'mdb/main' %>
-<%= javascript_include_tag 'mdb/popper.min' %>
-
+    <%= javascript_include_tag 'mdb/jquery-3.2.1.min' %>
+    <%= javascript_include_tag 'mdb/popper.min' %>
+    <%= javascript_include_tag 'mdb/bootstrap.min' %>
+    <%= javascript_include_tag 'mdb/main' %>
+    <%= javascript_include_tag 'mdb/mdb.min' %>
+    
     <script>new WOW().init();</script>
   </body>
 </html>

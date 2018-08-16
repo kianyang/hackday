@@ -28,9 +28,9 @@ consumer = User.create({
     first_name: 'John',
     last_name: 'Doe',
     address: 'California',
-    email: 'john.doe@gmail.com',
-    password: 'johndoe',
-    password_confirmation: 'johndoe'
+    email: 'john@gmail.com',
+    password: 'john',
+    password_confirmation: 'john'
 })
 consumer.add_role :consumer
 

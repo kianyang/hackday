@@ -1,10 +1,10 @@
 #intro {
-  background: url("../img/panorama-3094696_1920.jpg") no-repeat center center;
+  background: url('<%= asset_path('panorama-3094696_1920.jpg') %>') no-repeat center center;
   background-size: cover;
 }
 
 .top-nav-collapse {
-  background-color: #3949ab !important;
+  background-color: #369f24 !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -13,7 +13,7 @@
 
 @media (max-width: 768px) {
   .navbar:not(.top-nav-collapse) {
-    background: #3949ab !important;
+    background: #369f24 !important;
   }
 }
 
@@ -24,7 +24,7 @@
 
 .hm-gradient .full-bg-img {
   background: rgba(42, 27, 161, 0.7);
-  background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: linear-gradient(45deg, rgba(161, 81, 27, 0.5), rgba(29, 210, 51, 0.5) 100%);
 }
 
 @media (max-width: 450px) {
@@ -39,7 +39,7 @@
 }
 
 #pricing .card-image {
-  background: url("../img/architecture.jpg") no-repeat center center;
+  background: url("<%= asset_path('architecture.jpg') %>") no-repeat center center;
 }
 
 #pricing ul li {
