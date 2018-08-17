@@ -18,7 +18,7 @@ class InvoicesController < ApplicationController
 
   def show
     @header = "Sales"
-    @qrcode = RQRCode::QRCode.new(claim_invoice_url(@invoice), :size => 5, :level => :h)
+    @qrcode = RQRCode::QRCode.new(claim_invoice_url(@invoice), :size => 6, :level => :h)
   end
 
   def add_to_cart
